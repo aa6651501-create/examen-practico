@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nombre de tu Empresa - Página Principal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* FUENTES Y VARIABLES */
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #f4f4f4;
+            --text-color: #333;
+            --light-text: #fff;
+            --bg-light: #f9f9f9;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            margin-top: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+        }
+
+        /* ======================== HEADER ======================== */
+        .header {
+            background: var(--light-text);
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+        .nav-menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-menu a {
+            color: var(--text-color);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary-color);
+        }
+
+        /* ======================== HERO SECTION ======================== */
+
+        .hero {
+    position: relative; /* Clave para que el contenido se posicione sobre el banner */
+    background-image: url('URL_DE_TU_IMAGEN_DE_BANNER.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    height: 500px; /* Altura del banner reducida a 500px */
+    width: 100%;
+    
+    display: flex; /* Centra el contenido horizontal y verticalmente */
+    justify-content: center;
+    align-items: center;
+
+    color: #fff;
+    text-align: center;
+    overflow: hidden; /* Evita que el contenido se desborde */
+}
+
+.hero-content {
+    /* El fondo ahora es completamente transparente */
+    background-color: transparent; 
+    padding: 0; /* Quitamos el padding para que no ocupe espacio innecesario */
+    
+    /* El contenido se superpone a la imagen */
+    position: absolute; 
+    top: 50%; /* Lo mueve al 50% de la altura del contenedor padre */
+    left: 50%; /* Lo mueve al 50% de la anchura del contenedor padre */
+    transform: translate(-50%, -50%); /* Ajuste para centrarlo perfectamente */
+    
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 0.5em;
+    /* Sombra del texto para mejorar la legibilidad sobre la imagen */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); 
+}
+
+.hero-content p {
+    font-size: 1.3em;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.cta-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-shadow: none;
+}
+
+        /* ======================== ABOUT SECTION ======================== */
+        .about {
+            padding: 60px 0;
+            background-color: var(--bg-light);
+        }
+
+        .about-container {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-image {
+            flex: 1;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        /* ======================== PRODUCTS SECTION ======================== */
+        .products {
+            padding: 60px 0;
+        }
+
+        .products h2, .gallery h2, .contact h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            background: var(--light-text);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .product-card img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .product-card h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .btn-buy {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-top: 15px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-buy:hover {
+            background-color: #004494;
+        }
+
+        /* ======================== GALLERY SECTION ======================== */
+        .gallery {
+            padding: 60px 0;
+            background-color: var(--bg-light);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .gallery-grid img:hover {
+            transform: scale(1.05);
+        }
+
+        /* ======================== CONTACT SECTION ======================== */
+        .contact {
+            padding: 60px 0;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-form label {
+            font-weight: 600;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .contact-form button {
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #004494;
+        }
+
+        /* ======================== FOOTER ======================== */
+        .footer {
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* ======================== RESPONSIVE DESIGN ======================== */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .about-container {
+                flex-direction: column;
+            }
+            
+            .nav-menu ul {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="#">
+                    <img src="https://via.placeholder.com/150x50.png?text=LOGO" alt="Logo de la Empresa">
+                </a>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#empresa">Empresa</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#galeria">Galería</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+    <section id="inicio" class="hero">
+        <img src="img/newbanner.png" alt="Banner principal de la empresa" class="hero-image">
+        <div class="hero-content">
+            <h1>Transformamos ideas en realidad digital</h1>
+            <p>Creamos soluciones innovadoras para impulsar tu negocio al siguiente nivel.</p>
+            <a href="#contacto" class="cta-button">¡Empieza tu proyecto hoy!</a>
+        </div>
+    </section>
+
+        <section id="empresa" class="about">
+            <div class="container about-container">
+                <div class="about-image">
+                    <img src="https://via.placeholder.com/500x400.png?text=Nuestra+Empresa" alt="Nuestra Empresa">
+                </div>
+                <div class="about-text">
+                    <h2>Nuestra Historia</h2>
+                    <p>Fundada en 2020, nuestra empresa nació de la pasión por la tecnología y el diseño. Nos dedicamos a crear experiencias web únicas y funcionales que ayuden a nuestros clientes a destacar en el mercado. Con un equipo de expertos, hemos logrado convertirnos en un referente en la industria, siempre buscando la excelencia y la innovación.</p>
+                    <p>Creemos que cada proyecto es una oportunidad para crecer y superar las expectativas. Nuestro compromiso es contigo y con el éxito de tu negocio.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="productos" class="products">
+            <div class="container">
+                <h2>Nuestros Productos</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/300x200.png?text=Producto+1" alt="Producto 1">
+                        <h3>Producto Destacado 1</h3>
+                        <p>Descripción breve del producto, sus características principales y beneficios.</p>
+                        <a href="#" class="btn-buy">Comprar ahora</a>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/300x200.png?text=Producto+2" alt="Producto 2">
+                        <h3>Producto Destacado 2</h3>
+                        <p>Descripción breve del producto, sus características principales y beneficios.</p>
+                        <a href="#" class="btn-buy">Comprar ahora</a>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/300x200.png?text=Producto+3" alt="Producto 3">
+                        <h3>Producto Destacado 3</h3>
+                        <p>Descripción breve del producto, sus características principales y beneficios.</p>
+                        <a href="#" class="btn-buy">Comprar ahora</a>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/300x200.png?text=Producto+4" alt="Producto 4">
+                        <h3>Producto Destacado 4</h3>
+                        <p>Descripción breve del producto, sus características principales y beneficios.</p>
+                        <a href="#" class="btn-buy">Comprar ahora</a>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/300x200.png?text=Producto+5" alt="Producto 5">
+                        <h3>Producto Destacado 5</h3>
+                        <p>Descripción breve del producto, sus características principales y beneficios.</p>
+                        <a href="#" class="btn-buy">Comprar ahora</a>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/300x200.png?text=Producto+6" alt="Producto 6">
+                        <h3>Producto Destacado 6</h3>
+                        <p>Descripción breve del producto, sus características principales y beneficios.</p>
+                        <a href="#" class="btn-buy">Comprar ahora</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="galeria" class="gallery">
+            <div class="container">
+                <h2>Galería de Imágenes</h2>
+                <div class="gallery-grid">
+                    <img src="https://via.placeholder.com/400x300.png?text=Imagen+1" alt="Imagen de Galería 1">
+                    <img src="https://via.placeholder.com/400x300.png?text=Imagen+2" alt="Imagen de Galería 2">
+                    <img src="https://via.placeholder.com/400x300.png?text=Imagen+3" alt="Imagen de Galería 3">
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="contact">
+            <div class="container">
+                <h2>Contáctanos</h2>
+                <form class="contact-form">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="phone">Teléfono</label>
+                    <input type="tel" id="phone" name="phone">
+
+                    <label for="subject">Asunto</label>
+                    <input type="text" id="subject" name="subject" required>
+
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <button type="submit">Enviar Mensaje</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Nombre de tu Empresa. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
