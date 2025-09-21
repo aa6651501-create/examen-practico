@@ -3,11 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nombre de tu Empresa - Página Principal</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <style>
+    <title>Dulce Sabor</title>
+    <style> /* ESTILOS */
         /* FUENTES Y VARIABLES */
         :root {
             --primary-color: #0056b3;
@@ -41,46 +38,63 @@
         }
 
         /* ======================== HEADER ======================== */
-        .header {
-            background: var(--light-text);
-            padding: 10px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
+/* ======================== HEADER ======================== */
+.header {
+    background: var(--light-text);
+    padding: 10px 0;
+    
+    /* Propiedad clave para fijar el nav */
+    position: sticky;
+    top: 0; /* Indica que la barra debe pegarse a la parte superior (a 0px) */
+    
+    z-index: 1000; /* Asegura que la barra de navegación siempre esté encima de otros elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Añade una sombra para que se vea mejor */
+}
 
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Mantiene el espacio entre el logo y el menú */
+    align-items: center; /* Centra el contenido verticalmente */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
-        .logo img {
-            height: 50px;
-        }
+/* Aplicamos Flexbox al nuevo contenedor */
+.logo-empresa {
+    display: flex;
+    align-items: center; /* ¡Esta es la clave para la alineación! */
+    gap: 10px;
+}
 
-        .nav-menu ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            gap: 25px;
-        }
+.logo img {
+    height: 50px;
+    width: 50px;
+}
 
-        .nav-menu a {
-            color: var(--text-color);
-            font-weight: 600;
-            transition: color 0.3s;
-        }
+.nombre-empresa {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: var(--text-color);
+    white-space: nowrap;
+}
+.nav-menu ul {
+    list-style: none; /* Elimina las viñetas predeterminadas de la lista */
+    margin: 0;        /* Quita el margen predeterminado de la lista */
+    padding: 0;       /* Elimina el padding predeterminado */
+    display: flex;    /* Alinea los elementos de la lista horizontalmente */
+    gap: 25px;        /* Añade un espacio de 25px entre cada elemento del menú */
+}
 
-        .nav-menu a:hover {
-            color: var(--primary-color);
-        }
+.nav-menu a {
+    color: var(--text-color);    /* Color de texto para los enlaces */
+    font-weight: 600;            /* Hace el texto un poco más audaz */
+    transition: color 0.3s;      /* Suaviza la transición de color al pasar el mouse */
+}
 
+.nav-menu a:hover {
+    color: var(--primary-color); /* Cambia el color del enlace al pasar el mouse sobre él */
+}
         /* ======================== HERO SECTION ======================== */
 
         .hero {
@@ -129,6 +143,10 @@
     max-width: 600px;
     margin: 0 auto 30px;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-image{
+    width: 100%;
 }
 
 .cta-button {
@@ -317,40 +335,40 @@
     </style>
 </head>
 <body>
-
-    <header class="header">
-        <div class="header-container">
+        <header class="header"> <!-- logo -->
+    <div class="header-container">
+        <div class="logo-empresa">  
             <div class="logo">
                 <a href="#">
-                    <img src="https://via.placeholder.com/150x50.png?text=LOGO" alt="Logo de la Empresa">
+                    <img src="img/dulce sabor.png" alt="Logo de Dulce Sabor">
                 </a>
             </div>
-            <nav class="nav-menu">
-                <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#empresa">Empresa</a></li>
-                    <li><a href="#productos">Productos</a></li>
-                    <li><a href="#galeria">Galería</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </nav>
+            <span class="nombre-empresa">Dulce Sabor</span>
         </div>
-    </header>
-
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#empresa">Empresa</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+        </header>
     <main>
-    <section id="inicio" class="hero">
-        <img src="img/newbanner.png" alt="Banner principal de la empresa" class="hero-image">
+        <section id="inicio" class="hero"> <!-- BANNER -->
+        <img src="img/newbannerhoy.gif" alt="Banner principal de la empresa" class="hero-image">
         <div class="hero-content">
             <h1>Transformamos ideas en realidad digital</h1>
             <p>Creamos soluciones innovadoras para impulsar tu negocio al siguiente nivel.</p>
-            <a href="#contacto" class="cta-button">¡Empieza tu proyecto hoy!</a>
+            <a href="https://www.deli.com.co/Deli-Inicio/" class="cta-button">¡Empieza tu proyecto hoy!</a>
         </div>
-    </section>
-
-        <section id="empresa" class="about">
+        </section>
+        <section id="empresa" class="about"><!-- HISTORIA -->
             <div class="container about-container">
                 <div class="about-image">
-                    <img src="https://via.placeholder.com/500x400.png?text=Nuestra+Empresa" alt="Nuestra Empresa">
+                    <img src="img/historia.jpg" alt="Nuestra Empresa">
                 </div>
                 <div class="about-text">
                     <h2>Nuestra Historia</h2>
@@ -359,63 +377,68 @@
                 </div>
             </div>
         </section>
+        <section id="productos" class="products"> <!-- PRODUCTO -->
+    <div class="container">
+        <h2>Nuestros Productos</h2>
+        <div class="product-grid">
 
-        <section id="productos" class="products">
-            <div class="container">
-                <h2>Nuestros Productos</h2>
-                <div class="product-grid">
-                    <div class="product-card">
-                        <img src="https://via.placeholder.com/300x200.png?text=Producto+1" alt="Producto 1">
-                        <h3>Producto Destacado 1</h3>
-                        <p>Descripción breve del producto, sus características principales y beneficios.</p>
-                        <a href="#" class="btn-buy">Comprar ahora</a>
-                    </div>
-                    <div class="product-card">
-                        <img src="https://via.placeholder.com/300x200.png?text=Producto+2" alt="Producto 2">
-                        <h3>Producto Destacado 2</h3>
-                        <p>Descripción breve del producto, sus características principales y beneficios.</p>
-                        <a href="#" class="btn-buy">Comprar ahora</a>
-                    </div>
-                    <div class="product-card">
-                        <img src="https://via.placeholder.com/300x200.png?text=Producto+3" alt="Producto 3">
-                        <h3>Producto Destacado 3</h3>
-                        <p>Descripción breve del producto, sus características principales y beneficios.</p>
-                        <a href="#" class="btn-buy">Comprar ahora</a>
-                    </div>
-                    <div class="product-card">
-                        <img src="https://via.placeholder.com/300x200.png?text=Producto+4" alt="Producto 4">
-                        <h3>Producto Destacado 4</h3>
-                        <p>Descripción breve del producto, sus características principales y beneficios.</p>
-                        <a href="#" class="btn-buy">Comprar ahora</a>
-                    </div>
-                    <div class="product-card">
-                        <img src="https://via.placeholder.com/300x200.png?text=Producto+5" alt="Producto 5">
-                        <h3>Producto Destacado 5</h3>
-                        <p>Descripción breve del producto, sus características principales y beneficios.</p>
-                        <a href="#" class="btn-buy">Comprar ahora</a>
-                    </div>
-                    <div class="product-card">
-                        <img src="https://via.placeholder.com/300x200.png?text=Producto+6" alt="Producto 6">
-                        <h3>Producto Destacado 6</h3>
-                        <p>Descripción breve del producto, sus características principales y beneficios.</p>
-                        <a href="#" class="btn-buy">Comprar ahora</a>
-                    </div>
-                </div>
+            <div class="product-card">
+                <img src="img/bread-5418853_1280.jpg" alt="Pan de Masa Madre Artesanal">
+                <h3>Pan de Masa Madre</h3>
+                <p>Elaborado con fermentación natural para un sabor y textura únicos. Corteza crujiente y miga aireada.</p>
+                <a href="https://wa.me/573045649705?text=Hola,%20me%20gustaría%20comprar%20el%20Pan%20de%20Masa%20Madre." class="btn-buy">Comprar ahora</a>
             </div>
-        </section>
 
-        <section id="galeria" class="gallery">
+            <div class="product-card">
+                <img src="img/bread-1966551_1280.jpg" alt="Pan Integral Rústico">
+                <h3>Pan Integral Rústico</h3>
+                <p>Una opción saludable y nutritiva, con granos enteros y un delicioso sabor a cereal. Perfecto para el día a día.</p>
+                <a href="https://wa.me/573045649705?text=Hola,%20me%20gustaría%20comprar%20el%20Pan%20Integral%20Rústico." class="btn-buy">Comprar ahora</a>
+            </div>
+
+            <div class="product-card">
+                <img src="img/bread-7438544_1280.jpg" alt="Pan de Centeno">
+                <h3>Pan de Centeno</h3>
+                <p>Intenso y aromático, ideal para acompañar quesos y embutidos. Con un toque de semillas para mayor sabor.</p>
+                <a href="https://wa.me/573045649705?text=Hola,%20me%20gustaría%20comprar%20el%20Pan%20de%20Centeno." class="btn-buy">Comprar ahora</a>
+            </div>
+
+            <div class="product-card">
+                <img src="img/bread-7784892_1280.jpg" alt="Pan de Molde Artesanal">
+                <h3>Pan de Molde</h3>
+                <p>Suave y esponjoso, ideal para tostadas o sándwiches. Una opción versátil para toda la familia.</p>
+                <a href="https://wa.me/573045649705?text=Hola,%20me%20gustaría%20comprar%20el%20Pan%20de%20Molde." class="btn-buy">Comprar ahora</a>
+            </div>
+
+            <div class="product-card">
+                <img src="img/bread-821503_1280.jpg" alt="Hogaza de Campo">
+                <h3>Hogaza de Campo</h3>
+                <p>Una pieza clásica con una corteza gruesa y un interior tierno. Hecha con el cuidado de la panadería tradicional.</p>
+                <a href="https://wa.me/573045649705?text=Hola,%20me%20gustaría%20comprar%20la%20Hogaza%20de%20Campo." class="btn-buy">Comprar ahora</a>
+            </div>
+
+            <div class="product-card">
+                <img src="img/croissant-7598665_1280.jpg" alt="Croissants Frescos">
+                <h3>Croissants</h3>
+                <p>Nuestra especialidad de la casa, hojaldrados y con un delicado sabor a mantequilla. Perfectos para el desayuno.</p>
+                <a href="https://wa.me/573045649705?text=Hola,%20me%20gustaría%20comprar%20Croissants." class="btn-buy">Comprar ahora</a>
+            </div>
+
+        </div>
+    </div>
+        </section>
+        <section id="galeria" class="gallery"> <!-- GALERIA -->
             <div class="container">
                 <h2>Galería de Imágenes</h2>
                 <div class="gallery-grid">
-                    <img src="https://via.placeholder.com/400x300.png?text=Imagen+1" alt="Imagen de Galería 1">
-                    <img src="https://via.placeholder.com/400x300.png?text=Imagen+2" alt="Imagen de Galería 2">
-                    <img src="https://via.placeholder.com/400x300.png?text=Imagen+3" alt="Imagen de Galería 3">
+                    <img src="img/cupcakes-5116009_1280.jpg" alt="Imagen de Galería 1">
+                    <img src="img/croissant-7598665_1280.jpg" alt="Imagen de Galería 2">
+                    <img src="img/bread-7438544_1280.jpg" alt="Imagen de Galería 3">
+
                 </div>
             </div>
         </section>
-
-        <section id="contacto" class="contact">
+        <section id="contacto" class="contact"><!-- CONTACTO -->
             <div class="container">
                 <h2>Contáctanos</h2>
                 <form class="contact-form">
@@ -439,10 +462,8 @@
             </div>
         </section>
     </main>
-
-    <footer class="footer">
-        <p>&copy; 2025 Nombre de tu Empresa. Todos los derechos reservados.</p>
-    </footer>
-
+        <footer class="footer"><!-- FOOTER -->
+        <p>&copy; 2025 Dulce Sabor. Todos los derechos reservados.</p>
+        </footer>
 </body>
 </html>
